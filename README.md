@@ -28,6 +28,7 @@ source ~/.bashrc
 ```
 
 **To verify if arduino-cli is installed correctly**
+**Get Arduino CLI Version**
 
 arduino-cli  Version: 1.0.4 Commit: a0d912da Date: 2024-08-12T13:42:36Z
 
@@ -62,17 +63,26 @@ arduino-cli config init --config-file /path/to/custom/arduino-cli.yaml
 
 
 To store the Arduino CLI configuration in the current directory
+You can modify for custom settings.
 
 ```
 arduino-cli config init --config-file ./arduino-cli.yaml
 ```
 
 
-**3. List available boards Ports**
+**3. List connected boards Ports**
 
 ```
 arduino-cli board list
 ```
+
+``` 
+# arduino-cli.yaml
+board:
+  port: /dev/ttyUSB0                # Set the port for your board (if known)
+  fqbn: arduino:avr:uno             # Change this to your actual board FQBN
+```
+
 
 
 **4. Search for Boards**
@@ -98,11 +108,39 @@ arduino-cli board info arduino:avr:uno
 ```
 
 
-**5. Compile a sketch**
+
+**5. Create a new sketch**
+
+arduino-cli sketch new <sketch_name>
+
+
+use:
+
+```
+arduino-cli sketch new led
+```
+
+
+```
+.
+├── arduino-cli.yaml
+├── bin
+│   └── arduino-cli
+└── led
+    └── led.ino
+
+3 directories, 3 files
+
+```
+
+
+
+**6. Compile a sketch**
 
 arduino-cli compile --fqbn <board_fqbn> <sketch_path>
 
 use: Compiling for an Arduino Uno.
+
 ```
 arduino-cli compile --fqbn arduino:avr:uno ~/Arduino/MySketch/
 ```
@@ -120,18 +158,21 @@ arduino-cli compile --fqbn arduino:avr:uno --warnings all ~/Arduino/MySketch/
 ```
 
 
-**Export Compiled Binaries**
+**Export Compiled Binaries | Generate a Sketch Hex File**
 
 arduino-cli compile --fqbn <board_fqbn> --export-binaries <sketch_path>
+arduino-cli compile --fqbn <board_fqbn> --output-dir <output_directory> --export-binaries <sketch_path>
 
-use: 
+use: # Generate a HEX file for Arduino Uno and export to build folder
 
 ```
 arduino-cli compile --fqbn arduino:avr:uno --export-binaries ~/Arduino/MySketch/
+
 ```
 
 
-**6. Upload a sketch**
+
+**7. Upload a sketch**
 
 arduino-cli upload -p <port> --fqbn <board_fqbn> <sketch_path>
 
@@ -156,7 +197,7 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno ~/Arduino/MySketch/ --
 ```
 
 
-**7. Library Commands : Search for Libraries**
+**8. Library Commands : Search for Libraries**
 
 arduino-cli lib search <library_name>
 
@@ -199,7 +240,7 @@ arduino-cli lib update-index
 ```
 
 
-**8. core**
+**9. core**
 
 arduino-cli core search
 
@@ -229,30 +270,9 @@ use:
 arduino-cli core list
 ```
 
-**9. List connected boards**
-
-use:
-
-```
-arduino-cli board list
-```
 
 
-
-**10. Create a new sketch**
-
-arduino-cli sketch new <sketch_name>
-
-
-
-
-```
-arduino-cli sketch new MySketch
-```
-
-
-
-**11. Serial Monitor**
+**10. Serial Monitor**
 
 arduino-cli monitor -p <port>  # Open Serial Monitor
 
@@ -265,8 +285,7 @@ arduino-cli monitor -p /dev/ttyUSB0
 
 
 
-
-**12. Show help**
+**11. Show help**
 
 use:
 
@@ -277,13 +296,15 @@ arduino-cli help
 
 **Show help for a specific command (e.g., compile)**
 
+use:
+
 ```
 arduino-cli compile --help
 ```
 
 
 
-**13. Burn a Bootloader**
+**12. Burn a Bootloader**
 
 arduino-cli burn-bootloader --fqbn <board_fqbn>
 
@@ -297,7 +318,7 @@ arduino-cli burn-bootloader --fqbn arduino:avr:uno
 
 
 
-**14. Update Arduino Core Index**
+**13. Update Arduino Core Index**
 
 use:
 
@@ -309,7 +330,7 @@ arduino-cli core update-index
 
 
 
-**15. Upgrade Arduino CLI**
+**14. Upgrade Arduino CLI**
 
 use:
 
@@ -320,12 +341,11 @@ arduino-cli upgrade
 
 
 
-
-**16. Uninstall a Core**
+**15. Uninstall a Core**
 
 arduino-cli core uninstall <core_name>
 
-# Uninstall the AVR core for Arduino Uno, Mega, etc.
+Uninstall the AVR core for Arduino Uno, Mega, etc.
 
 use:
 
@@ -335,48 +355,33 @@ arduino-cli core uninstall arduino:avr
 
 
 
-**17. Generate a Sketch Hex File**
 
+**16. Update Libraries**
 
-arduino-cli compile --fqbn <board_fqbn> --output-dir <output_directory> --export-binaries <sketch_path>
+Update the library index to ensure all installed libraries are up to date
 
+use:
 
-# Generate a HEX file for Arduino Uno and export to build folder
-arduino-cli compile --fqbn arduino:avr:uno --export-binaries ~/Arduino/MySketch/
-
-
-18. Update Libraries
-
+```
 arduino-cli lib update-index
-
-# Update the library index to ensure all installed libraries are up to date
-arduino-cli lib update-index
+```
 
 
-19. Install Third-Party Cores
+
+
+**17. Install Third-Party Cores**
 
 arduino-cli core update-index --additional-urls <url>
 
+Add a core URL (e.g., ESP8266 core) and update index
 
-# Add a core URL (e.g., ESP8266 core) and update index
+use:
+
+```
 arduino-cli core update-index --additional-urls http://arduino.esp8266.com/stable/package_esp8266com_index.json
+```
 
 
-
-
-20. Get Arduino CLI Version
-
-arduino-cli version
-
-
-21. Initialize a CLI Configuration File
-
-Generate a new arduino-cli.yaml configuration file:
-
-
-arduino-cli config init
-
-This generates a configuration file that you can modify for custom settings.
 
 
 
