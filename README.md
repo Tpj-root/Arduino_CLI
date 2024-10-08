@@ -1,5 +1,5 @@
 # Arduino_CLI
-** Arduino CLI: Transforming Coders into Command Line Ninjas! **
+**Arduino CLI: Transforming Coders into Command Line Ninjas!**
 
 ** 1. Installation **
 
