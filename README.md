@@ -10,10 +10,11 @@ curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.
 ```
 
 **2. Configuration File**
-
-**The configuration file arduino-cli.yaml is located in the user's home directory (~/.arduino-cli.yaml).**
-**It stores settings such as board configurations and library paths.**
 **To create a new configuration file**
+
+Note:
+
+It stores settings such as board configurations and library paths.
 
 use:
 
