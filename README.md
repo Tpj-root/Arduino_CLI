@@ -3,7 +3,6 @@
 
 **1. Installation**
 
-**To install Arduino CLI, you can download the latest version from the official GitHub repository:**
 **Download and install Arduino CLI**
 
 ```
