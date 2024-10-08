@@ -1,35 +1,36 @@
 # Arduino_CLI
 **Arduino CLI: Transforming Coders into Command Line Ninjas!**
 
-** 1. Installation **
+**1. Installation**
 
-** To install Arduino CLI, you can download the latest version from the official GitHub repository: **
-** Download and install Arduino CLI **
+**To install Arduino CLI, you can download the latest version from the official GitHub repository:**
+**Download and install Arduino CLI**
 
 ```
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
 ```
 
-### 2. Configuration File
+**2. Configuration File**
 
-## The configuration file arduino-cli.yaml is located in the user's home directory (~/.arduino-cli.yaml). 
-## It stores settings such as board configurations and library paths.
-## To create a new configuration file, 
-## use:
+**The configuration file arduino-cli.yaml is located in the user's home directory (~/.arduino-cli.yaml).**
+**It stores settings such as board configurations and library paths.**
+**To create a new configuration file**
+
+use:
 
 ```
 arduino-cli config init
 ```
 
 
-### 3. List available boards
+**3. List available boards**
 
 ```
 arduino-cli board list
 ```
 
 
-### 4. Search for Boards
+**4. Search for Boards**
 
 arduino-cli board search <search_term>
 
