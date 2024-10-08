@@ -2,6 +2,36 @@
 
 **Arduino CLI: Transforming Coders into Command Line Ninjas!**
 
+Common Arduino Abbreviations
+
+    FQBN - Fully Qualified Board Name
+    IDE - Integrated Development Environment
+    CLI - Command Line Interface
+    MCU - Microcontroller Unit
+    PWM - Pulse Width Modulation
+    GPIO - General Purpose Input/Output
+    UART - Universal Asynchronous Receiver-Transmitter
+    I2C - Inter-Integrated Circuit (also known as TWI - Two Wire Interface)
+    SPI - Serial Peripheral Interface
+    ADC - Analog-to-Digital Converter
+    DAC - Digital-to-Analog Converter
+    ISP - In-System Programming
+    BOM - Bill of Materials
+    RFID - Radio-Frequency Identification
+    NFC - Near Field Communication
+    USB - Universal Serial Bus
+    RTC - Real-Time Clock
+    LED - Light Emitting Diode
+    LCD - Liquid Crystal Display
+    OLED - Organic Light Emitting Diode
+    SD - Secure Digital (memory card)
+    BLE - Bluetooth Low Energy
+    WiFi - Wireless Fidelity
+    MQTT - Message Queuing Telemetry Transport
+    REST - Representational State Transfer
+
+
+
 **1. Installation**
 
 **Download and install Arduino CLI**
@@ -112,6 +142,13 @@ use:
 arduino-cli board info arduino:avr:uno
 ```
 
+<manufacturer>:<architecture>:<board_type>
+
+Arduino Uno: arduino:avr:uno
+Arduino Mega: arduino:avr:mega
+Arduino Nano: arduino:avr:nano
+Arduino Due: arduino:sam:arduino_due_x
+ESP8266: esp8266:esp8266:generic
 
 **5. core**
 
@@ -145,12 +182,6 @@ arduino-cli core list
 
 
 
-
-
-
-
-
-
 **5. Create a new sketch**
 
 arduino-cli sketch new <sketch_name>
@@ -178,6 +209,12 @@ arduino-cli sketch new led
 
 
 **6. Compile a sketch**
+
+--verbose 
+
+flag will provide detailed output, including information about the compilation process,
+which can help you troubleshoot any issues.
+
 
 arduino-cli compile --fqbn <board_fqbn> <sketch_path>
 
@@ -218,6 +255,27 @@ arduino-cli compile --fqbn arduino:avr:uno --export-binaries led/led.ino
 
 ```
 
+
+
+```
+cnc@debian:~/Desktop/Arduino_cmd/test$ tree
+.
+├── arduino-cli.yaml
+├── bin
+│   └── arduino-cli
+└── led
+    ├── build
+    │   └── arduino.avr.uno
+    │       ├── led.ino.eep
+    │       ├── led.ino.elf
+    │       ├── led.ino.hex
+    │       ├── led.ino.with_bootloader.bin
+    │       └── led.ino.with_bootloader.hex
+    └── led.ino
+
+5 directories, 8 files
+
+```
 
 
 **7. Upload a sketch**
