@@ -1,10 +1,10 @@
 # Arduino_CLI
-Arduino CLI: Transforming Coders into Command Line Ninjas!
+** Arduino CLI: Transforming Coders into Command Line Ninjas! **
 
-### 1. Installation
+** 1. Installation **
 
-## To install Arduino CLI, you can download the latest version from the official GitHub repository:
-## Download and install Arduino CLI
+** To install Arduino CLI, you can download the latest version from the official GitHub repository: **
+** Download and install Arduino CLI **
 
 ```
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
