@@ -113,6 +113,43 @@ arduino-cli board info arduino:avr:uno
 ```
 
 
+**5. core**
+
+arduino-cli core search
+
+use:
+
+```
+arduino-cli core search esp32
+```
+
+**install**
+
+arduino-cli core install <core_name>
+
+use:
+
+```
+arduino-cli core install arduino:avr  # For Arduino AVR boards like Uno
+arduino-cli core install esp32:esp32  # For ESP32 boards
+
+```
+
+**List Installed Cores**
+
+use:
+
+```
+arduino-cli core list
+```
+
+
+
+
+
+
+
+
 
 **5. Create a new sketch**
 
@@ -153,7 +190,10 @@ arduino-cli compile --fqbn arduino:avr:uno ~/Arduino/MySketch/
 **--output-dir: Specify an output directory for compiled files.**
 
 ```
+~ # home dir 
 arduino-cli compile --fqbn arduino:avr:uno --output-dir ~/Arduino/MySketch/build/ ~/Arduino/MySketch/
+
+arduino-cli compile --fqbn arduino:avr:uno --output-dir led/ led/led.ino
 ```
 
 **--warnings: Enable warnings, e.g., none, default, more, all.**
@@ -166,12 +206,15 @@ arduino-cli compile --fqbn arduino:avr:uno --warnings all ~/Arduino/MySketch/
 **Export Compiled Binaries | Generate a Sketch Hex File**
 
 arduino-cli compile --fqbn <board_fqbn> --export-binaries <sketch_path>
-arduino-cli compile --fqbn <board_fqbn> --output-dir <output_directory> --export-binaries <sketch_path>
 
 use: # Generate a HEX file for Arduino Uno and export to build folder
 
+Build in the current directory of the .ino file
+
 ```
 arduino-cli compile --fqbn arduino:avr:uno --export-binaries ~/Arduino/MySketch/
+arduino-cli compile --fqbn arduino:avr:uno --export-binaries led/led.ino
+
 
 ```
 
@@ -200,6 +243,10 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno ~/Arduino/MySketch/
 ```
 arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno ~/Arduino/MySketch/ --verify
 ```
+
+arduino-cli upload --fqbn arduino:avr:uno --port /dev/ttyUSB0 --verify ./led/
+
+
 
 
 **8. Library Commands : Search for Libraries**
@@ -245,35 +292,6 @@ arduino-cli lib update-index
 ```
 
 
-**9. core**
-
-arduino-cli core search
-
-use:
-
-```
-arduino-cli core search esp32
-```
-
-**install**
-
-arduino-cli core install <core_name>
-
-use:
-
-```
-arduino-cli core install arduino:avr  # For Arduino AVR boards like Uno
-arduino-cli core install esp32:esp32  # For ESP32 boards
-
-```
-
-**List Installed Cores**
-
-use:
-
-```
-arduino-cli core list
-```
 
 
 
