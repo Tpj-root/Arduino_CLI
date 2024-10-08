@@ -28,6 +28,7 @@ source ~/.bashrc
 ```
 
 **To verify if arduino-cli is installed correctly**
+
 **Get Arduino CLI Version**
 
 arduino-cli  Version: 1.0.4 Commit: a0d912da Date: 2024-08-12T13:42:36Z
@@ -39,6 +40,7 @@ arduino-cli version
 
 
 **2. Configuration File**
+
 **To create a new configuration file**
 
 Note:
