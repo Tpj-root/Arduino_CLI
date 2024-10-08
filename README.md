@@ -1,4 +1,5 @@
 # Arduino_CLI
+
 **Arduino CLI: Transforming Coders into Command Line Ninjas!**
 
 **1. Installation**
@@ -46,6 +47,7 @@ arduino-cli version
 Note:
 
 It stores settings such as board configurations and library paths.
+
 The Arduino CLI stores its configuration file in the home directory
 
 use:
@@ -56,8 +58,9 @@ arduino-cli config init
 
 
 If you want to specify a custom location for the configuration file,
-you can use the --config-file option when running arduino-cli. For example:
+you can use the --config-file option when running arduino-cli. 
 
+For example:
 
 ```
 arduino-cli config init --config-file /path/to/custom/arduino-cli.yaml
