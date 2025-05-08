@@ -9,6 +9,29 @@ sudo usermod -a -G dialout $USER
 
 
 
+https://docs.arduino.cc/learn/communication/modbus/
+https://www.instructables.com/How-to-Use-Modbus-With-Arduino/
+
+arduino-cli lib search "ModbusRTUSlave"
+
+
+arduino-cli lib install "ModbusRTUSlave"
+
+View liob list
+
+arduino-cli lib list
+
+
+
+
+sudo apt-get install libqt5serialbus5 libqt5serialbus5-dev
+
+
+
+
+
+
+
 
 
 Help
