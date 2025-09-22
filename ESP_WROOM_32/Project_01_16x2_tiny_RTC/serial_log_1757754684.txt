@@ -1,0 +1,251 @@
+Connected to /dev/ttyUSB0 @ 115200
+2000-0-0 0:3:49
+2000-0-0 0:3:50
+2000-0-0 0:3:51
+2000-0-0 0:3:52
+2000-0-0 0:3:53
+2000-0-0 0:3:54
+2000-0-0 0:3:55
+2000-0-0 0:3:56
+2000-0-0 0:3:57
+2000-0-0 0:3:58
+2000-0-0 0:3:59
+2000-0-0 0:4:0
+2000-0-0 0:4:1
+2000-0-0 0:4:2
+2000-0-0 0:4:3
+Time set!
+
+2165-165-165 165:165:85
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2165-165-165 165:165:17
+
+Time set!
+
+2165-165-165 165:165:85
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2165-165-165 165:165:85
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2005-0-15 5:1:16
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2005-0-15 5:1:16
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2165-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+E (75114) i2c.master: I2C transaction timeout detected
+
+E (75114) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed
+
+E (75115) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+E (87206) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed
+
+E (87206) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2025-9-13 14:40:41
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2165-165-165 165:165:45
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2000-0-0 0:0:0
+
+Time set!
+
+2165-0-0 0:0:0
+
+Time set!
+
+2165-165-0 0:0:0
+
+
