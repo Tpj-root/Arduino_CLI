@@ -39,6 +39,9 @@ cnc@debian:~/Arduino$
 
 
 
+
+https://github.com/Bodmer/TFT_eSPI/issues/3554
+
 🔌 Wiring
 
 TFT_eSPI/User_Setup.h
