@@ -534,6 +534,134 @@ arduino-cli core update-index --additional-urls http://arduino.esp8266.com/stabl
 
 
 
+Here’s a clean, working **note for local Arduino libraries** setup 👇
+
+---
+
+### 🧠 Local Library Setup (No Global Install)
+
+**Folder layout example**
+
+```
+Project_00_Hello/
+├── HelloLeonardo/
+│   └── HelloLeonardo.ino
+├── libraries/
+│   ├── Keyboard/
+│   │   ├── Keyboard.h
+│   │   └── Keyboard.cpp
+│   └── LedControl/
+│       ├── LedControl.h
+│       └── LedControl.cpp
+├── tools/
+│   └── arduino-cli
+└── Makefile
+```
+
+---
+
+### ⚙️ How Arduino finds libraries
+
+When compiling, Arduino (and `arduino-cli`) searches in this order:
+
+1. The sketch’s `libraries/` folder (your local one) ✅
+2. Global Arduino libraries (`~/Arduino/libraries/`)
+3. Core libraries (inside the board package)
+
+So local ones always **override** global ones.
+
+---
+
+### 🪄 To make Arduino-CLI use your local library
+
+In the **Makefile**, modify your `build` rule:
+
+```make
+build: $(ARDUINO)
+	$(ARDUINO) compile --fqbn $(FQBN) $(SKETCH) \
+	--output-dir $(BUILD_DIR) \
+	--libraries ./libraries
+```
+
+This tells it to search `./libraries/` first.
+
+---
+
+### 🧩 Add a new library manually
+
+1. Create folder → `libraries/YourLibraryName/`
+2. Copy `.h` and `.cpp` files inside.
+3. Optional: add `library.properties` if needed (for IDE metadata, not required for CLI).
+
+---
+
+### ✅ Example local use
+
+```cpp
+#include <LedControl.h>  // from ./libraries/LedControl/
+```
+
+Then just:
+
+```bash
+make build
+make upload
+```
+
+---
+
+
+
+Default Arduino library locations 👇
+
+---
+
+### 🏠 **User-installed libraries**
+
+```
+~/Arduino/libraries/
+```
+
+or on Windows:
+
+```
+Documents\Arduino\libraries\
+```
+
+→ Libraries you install via Library Manager or manually copy go here.
+
+---
+
+### ⚙️ **Built-in (core) libraries**
+
+These are inside your **board core package**, for example:
+
+```
+~/.arduino15/packages/esp32/hardware/esp32/<version>/libraries/
+```
+
+Example:
+
+```
+~/.arduino15/packages/esp32/hardware/esp32/3.3.2/libraries/
+```
+
+---
+
+### 🧩 **Search order**
+
+When compiling, Arduino looks in this order:
+
+1. `sketch_folder/libraries/` (your local project libs)
+2. `~/Arduino/libraries/` (user libraries)
+3. `.../hardware/.../libraries/` (core libs)
+
+---
+
+So you can keep your **project-specific libraries** in `./libraries/`,
+or **global shared ones** in `~/Arduino/libraries/`.
+
+
 
 
 
